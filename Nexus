@@ -6142,3 +6142,34 @@ transformationsTab:AddButton({
 transformationsTab:AddSection("ملاحظه: ترا يضهر عندك فقط")
 
 transformationsTab:AddSection("اذا تريد تتحكم بكل الشخصيه استخدم كيبورد دلتا")
+
+local GlitchTab = Window:MakeTab({"جلتش", "rbxassetid://"})
+
+GlitchTab:AddSection({"جلتش تبديل المحل"})
+GlitchTab:AddSection({"قريب بحط جلتشات اكثر"})
+local swapRunning = false
+
+GlitchTab:AddToggle({
+    Name = " تشغيل الجلتش",
+    Default = false,
+    Callback = function(value)
+        swapRunning = value
+        
+        if value then
+            local function getCDs()
+                return 
+                    workspace.__DEV.SwapablePOIs.PastryAndIceCream.PlotButtons.PastryShop.ClickDetector,
+                    workspace.__DEV.SwapablePOIs.PastryAndIceCream.PlotButtons.IceCreamShop.ClickDetector
+            end
+
+            task.spawn(function()
+                while swapRunning do
+                    local p, i = getCDs()
+                    pcall(function() fireclickdetector(p) end)
+                    pcall(function() fireclickdetector(i) end)
+                    task.wait(0.01)
+                end
+            end)
+        end
+    end
+})
