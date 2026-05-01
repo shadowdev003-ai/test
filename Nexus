@@ -6173,3 +6173,13 @@ GlitchTab:AddToggle({
         end
     end
 })
+local ThanksTab = Window:MakeTab({"thanks-الشكر", "rbxassetid://"})
+
+ThanksTab:AddSection({"شكرا لكل من استخدم هذا السكربت"})
+ThanksTab:AddParagraph({Title = "رسالة من المطور", Content = "ربي يعطيكم العافيه و يحفظكم، تحياتي الخالصه المطور Shadow."})
+ThanksTab:AddParagraph({Title = "تقدير", Content = "كل الدعم والتقدير لكل من ساهم او شجعني على تطوير هذا العمل."})
+ThanksTab:AddParagraph({Title = "هدفنا", Content = "هدفنا تقديم سكربتات عربية بمستوى احترافي يليق بكم."})
+ThanksTab:AddParagraph({Title = "استمروا", Content = "استمروا في دعمكم، فأنتم السبب في استمرار التطوير."})
+ThanksTab:AddParagraph({Title = "تنبيه", Content = "اريد اقول ان اي شخص تلاقيه مستعمل واجهتي او شي بسكربتي نفس الفكره ذا بايك مني الله اعلم"})
+ThanksTab:AddParagraph({Title = "...", Content = "انزل يا مدلع"})
+ThanksTab:AddParagraph({Title = "Nexus Hub", Content = ""})
